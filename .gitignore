@@ -7,6 +7,7 @@ upload
 tokenHub
 *.db
 build
+app.log
 *.db-journal
 logs
 web/default/dist

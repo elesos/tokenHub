@@ -65,7 +65,7 @@ const BRAND_AND_LITERAL_KEYS = new Set([
   'Moonshot',
   'Token Hub',
   'Token Hub &lt;noreply@example.com&gt;',
-  'NewAPI',
+  'tokenHub',
   'OAuth Client Secret',
   'OhMyGPT',
   'Ollama',

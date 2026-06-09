@@ -118,7 +118,7 @@ const brandNames = new Set([
   'AIGC2D','Anthropic','API2GPT','Claude','Cloudflare','Cohere','DeepSeek',
   'Discord','DoubaoVideo','FastGPT','Gemini','GitHub','Jimeng','JustSong',
   'LingYiWanWu','LinuxDO','Midjourney','MidjourneyPlus','MiniMax','Mistral',
-  'MokaAI','Moonshot','NewAPI','OhMyGPT','Ollama','OpenAI','OpenAIMax',
+  'MokaAI','Moonshot','tokenHub','OhMyGPT','Ollama','OpenAI','OpenAIMax',
   'OpenRouter','Passkey','Perplexity','QuantumNous','Replicate','SiliconFlow',
   'Stripe','Submodel','SunoAPI','Telegram','Tencent','Vertex AI','VolcEngine',
   'WeChat','Xinference','Xunfei','AI Proxy','One API',

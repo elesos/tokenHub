@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "rsbuild dev",
-    "build": "rsbuild build",
+    "build": "node --eval \"const f=require('fs');f.rmSync('dist',{recursive:true,force:true});f.rmSync('.rsbuild',{recursive:true,force:true});\" && rsbuild build",
     "build:check": "tsc -b && rsbuild build",
     "typecheck": "tsc -b",
     "lint": "eslint .",

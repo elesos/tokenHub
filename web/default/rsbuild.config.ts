@@ -84,6 +84,10 @@ export default defineConfig(({ envMode }) => {
       removeConsole: isProd ? ['log'] : false,
       // Speed up repeated `rsbuild build` (local + CI when node_modules/.cache is preserved).
       // @see https://v2.rsbuild.dev/config/performance/build-cache
+      // Note: we still enable it but the npm script does `rm -rf .rsbuild dist` before
+      // every `rsbuild build` to avoid poisoned cache when @lobehub/icons (or other
+      // packages with occasionally incomplete publishes) change their published artifacts
+      // for the same semver (different tarball content for ^5.10.0 etc.).
       buildCache: {
         cacheDigest: [process.env.VITE_REACT_APP_VERSION],
       },

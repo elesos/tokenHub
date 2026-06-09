@@ -45,7 +45,7 @@
   },
   "scripts": {
     "dev": "rsbuild dev",
-    "build": "rsbuild build",
+    "build": "node --eval \"const f=require('fs');f.rmSync('dist',{recursive:true,force:true});f.rmSync('.rsbuild',{recursive:true,force:true});\" && rsbuild build",
     "lint": "prettier . --check",
     "lint:fix": "prettier . --write",
     "eslint": "bunx eslint \"**/*.{js,jsx}\" --cache",

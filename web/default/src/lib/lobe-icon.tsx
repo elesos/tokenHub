@@ -26,6 +26,7 @@ For commercial licensing, please contact support@quantumnous.com
  * - Size parameter: getLobeIcon("OpenAI", 20)
  */
 import * as LobeIcons from '@lobehub/icons'
+import { Logo } from '@/assets/logo'
 
 /**
  * Parse a property value from string to appropriate type
@@ -97,6 +98,14 @@ export function getLobeIcon(
         ?
       </div>
     )
+  }
+
+  // Local icon fallbacks for project-specific names (e.g. "NewAPI") and to
+  // survive occasional incomplete publishes from @lobehub/icons (barrel exports
+  // referencing icon modules whose files are missing from the npm tarball).
+  const lower = trimmedName.toLowerCase()
+  if (lower === 'newapi' || lower === 'tokenhub' || lower === 'new-api') {
+    return <Logo width={size} height={size} />
   }
 
   // Parse component path and chained properties

@@ -4,6 +4,7 @@
 .history
 upload
 *.exe
+tokenHub
 *.db
 build
 *.db-journal

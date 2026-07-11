@@ -78,8 +78,7 @@ func SubscriptionRequestEpay(c *gin.Context) {
 	tradeNo := fmt.Sprintf("%s%d", common.GetRandomString(6), time.Now().Unix())
 	tradeNo = fmt.Sprintf("SUBUSR%dNO%s", userId, tradeNo)
 
-	client := GetEpayClient()
-	if client == nil {
+	if GetEpayClient() == nil {
 		common.ApiErrorMsg(c, "当前管理员未配置支付信息")
 		return
 	}
@@ -98,7 +97,7 @@ func SubscriptionRequestEpay(c *gin.Context) {
 		common.ApiErrorMsg(c, "创建订单失败")
 		return
 	}
-	uri, params, err := client.Purchase(&epay.PurchaseArgs{
+	purchaseResult, err := service.EpayPurchase(&service.EpayPurchaseArgs{
 		Type:           req.PaymentMethod,
 		ServiceTradeNo: tradeNo,
 		Name:           fmt.Sprintf("SUB:%s", plan.Title),
@@ -106,13 +105,18 @@ func SubscriptionRequestEpay(c *gin.Context) {
 		Device:         epay.PC,
 		NotifyUrl:      notifyUrl,
 		ReturnUrl:      returnUrl,
+		ClientIP:       service.NormalizeClientIP(c.ClientIP()),
 	})
 	if err != nil {
 		_ = model.ExpireSubscriptionOrder(tradeNo, model.PaymentProviderEpay)
 		common.ApiErrorMsg(c, "拉起支付失败")
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"message": "success", "data": params, "url": uri})
+	payType := string(purchaseResult.Type)
+	if payType == "" {
+		payType = string(service.EpayLaunchForm)
+	}
+	c.JSON(http.StatusOK, gin.H{"message": "success", "data": purchaseResult.Params, "url": purchaseResult.URL, "pay_type": payType})
 }
 
 func SubscriptionEpayNotify(c *gin.Context) {

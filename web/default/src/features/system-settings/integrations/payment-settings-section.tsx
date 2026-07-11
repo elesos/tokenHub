@@ -1105,7 +1105,9 @@ export function PaymentSettingsSection({
                       />
                     </FormControl>
                     <FormDescription>
-                      {t('Base address provided by your Epay service')}
+                      {t(
+                        'Supports base URL, submit.php (page jump), or mapi.php (API mode). Example: https://pay.example.com or https://pay.example.com/mapi.php'
+                      )}
                     </FormDescription>
                     <FormMessage />
                   </FormItem>

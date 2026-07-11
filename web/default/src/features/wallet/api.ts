@@ -105,6 +105,8 @@ export async function requestPayment(
   return {
     ...res.data,
     url: res.data.url || (res as unknown as { url?: string }).url,
+    pay_type:
+      res.data.pay_type || (res as unknown as { pay_type?: string }).pay_type,
   }
 }
 

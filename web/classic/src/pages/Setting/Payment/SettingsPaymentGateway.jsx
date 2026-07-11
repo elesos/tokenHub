@@ -136,7 +136,12 @@ export default function SettingsPaymentGateway(props) {
               <Form.Input
                 field='PayAddress'
                 label={t('支付地址')}
-                placeholder={t('例如：https://yourdomain.com')}
+                placeholder={t(
+                  '例如：https://pay.example.com 或 https://pay.example.com/mapi.php',
+                )}
+                extraText={t(
+                  '支持网关根地址、submit.php（页面跳转）或 mapi.php（API 模式）',
+                )}
               />
             </Col>
             <Col xs={24} sm={24} md={8} lg={8} xl={8}>

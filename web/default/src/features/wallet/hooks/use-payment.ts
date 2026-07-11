@@ -30,12 +30,20 @@ import {
 import {
   isStripePayment,
   isWaffoPancakePayment,
-  submitPaymentForm,
+  isMobileBrowser,
+  openPaymentURL,
+  postPaymentForm,
+  resolveEpayLaunch,
 } from '../lib'
 
 // ============================================================================
 // Payment Hook
 // ============================================================================
+
+export type ProcessPaymentResult =
+  | { ok: false }
+  | { ok: true; mode: 'redirect' }
+  | { ok: true; mode: 'qrcode'; qrContent: string }
 
 export function usePayment() {
   const [amount, setAmount] = useState<number>(0)
@@ -77,7 +85,10 @@ export function usePayment() {
 
   // Process payment
   const processPayment = useCallback(
-    async (topupAmount: number, paymentType: string) => {
+    async (
+      topupAmount: number,
+      paymentType: string
+    ): Promise<ProcessPaymentResult> => {
       try {
         setProcessing(true)
 
@@ -96,30 +107,61 @@ export function usePayment() {
 
         if (!isApiSuccess(response)) {
           toast.error(response.message || i18next.t('Payment request failed'))
-          return false
+          return { ok: false }
         }
 
         // Handle Stripe payment
         if (isStripe && response.data?.pay_link) {
           window.open(response.data.pay_link as string, '_blank')
           toast.success(i18next.t('Redirecting to payment page...'))
-          return true
+          return { ok: true, mode: 'redirect' }
         }
 
-        // Handle non-Stripe payment
+        // Handle non-Stripe payment (EasyPay / form / mapi)
         if (!isStripe && response.data) {
-          const url = (response as unknown as { url?: string }).url
-          if (url) {
-            submitPaymentForm(url, response.data)
-            toast.success(i18next.t('Redirecting to payment page...'))
-            return true
+          const url = (response as { url?: string }).url
+          const payType = (response as { pay_type?: string }).pay_type
+          if (!url) {
+            toast.error(i18next.t('Payment request failed'))
+            return { ok: false }
           }
+
+          const launch = resolveEpayLaunch(
+            url,
+            response.data as Record<string, unknown>,
+            payType
+          )
+
+          if (launch.type === 'qrcode') {
+            toast.success(i18next.t('Please scan the QR code to pay'))
+            return { ok: true, mode: 'qrcode', qrContent: launch.content }
+          }
+
+          if (launch.type === 'urlscheme') {
+            if (isMobileBrowser()) {
+              window.location.href = launch.url
+              toast.success(i18next.t('Redirecting to payment page...'))
+              return { ok: true, mode: 'redirect' }
+            }
+            // Desktop cannot open alipays:// / weixin:// — show QR instead of
+            // the render.alipay.com intermediate page that never completes pay.
+            toast.success(i18next.t('Please scan the QR code to pay'))
+            return { ok: true, mode: 'qrcode', qrContent: launch.qrContent }
+          }
+
+          if (launch.type === 'form') {
+            postPaymentForm(launch.url, launch.params)
+          } else {
+            openPaymentURL(launch.url)
+          }
+          toast.success(i18next.t('Redirecting to payment page...'))
+          return { ok: true, mode: 'redirect' }
         }
 
-        return false
+        return { ok: false }
       } catch (_error) {
         toast.error(i18next.t('Payment request failed'))
-        return false
+        return { ok: false }
       } finally {
         setProcessing(false)
       }

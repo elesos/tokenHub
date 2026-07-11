@@ -36,6 +36,13 @@ import {
 import { Separator } from '@/components/ui/separator'
 import { Dialog } from '@/components/dialog'
 import { GroupBadge } from '@/components/group-badge'
+import { PaymentQrDialog } from '@/features/wallet/components/dialogs/payment-qr-dialog'
+import {
+  isMobileBrowser,
+  openPaymentURL,
+  postPaymentForm,
+  resolveEpayLaunch,
+} from '@/features/wallet/lib'
 import {
   paySubscriptionStripe,
   paySubscriptionCreem,
@@ -71,12 +78,14 @@ export function SubscriptionPurchaseDialog(props: Props) {
   const { currency } = useSystemConfig()
   const [paying, setPaying] = useState(false)
   const [selectedEpayMethod, setSelectedEpayMethod] = useState('')
+  const [paymentQrContent, setPaymentQrContent] = useState<string | null>(null)
 
   useEffect(() => {
     if (props.open && props.epayMethods && props.epayMethods.length > 0) {
       setSelectedEpayMethod(props.epayMethods[0].type)
     } else if (!props.open) {
       setSelectedEpayMethod('')
+      setPaymentQrContent(null)
     }
   }, [props.open, props.epayMethods])
 
@@ -179,10 +188,6 @@ export function SubscriptionPurchaseDialog(props: Props) {
     }
   }
 
-  const isSafari =
-    typeof navigator !== 'undefined' &&
-    /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-
   const handlePayEpay = async () => {
     if (!selectedEpayMethod) {
       toast.error(t('Please select a payment method'))
@@ -195,22 +200,32 @@ export function SubscriptionPurchaseDialog(props: Props) {
         payment_method: selectedEpayMethod,
       })
       if (res.message === 'success' && res.url) {
-        const form = document.createElement('form')
-        form.action = res.url
-        form.method = 'POST'
-        if (!isSafari) {
-          form.target = '_blank'
+        const launch = resolveEpayLaunch(
+          res.url,
+          (res.data || {}) as Record<string, unknown>,
+          res.pay_type
+        )
+        if (launch.type === 'qrcode') {
+          setPaymentQrContent(launch.content)
+          toast.success(t('Please scan the QR code to pay'))
+          return
         }
-        Object.entries(res.data || {}).forEach(([key, value]) => {
-          const input = document.createElement('input')
-          input.type = 'hidden'
-          input.name = key
-          input.value = String(value)
-          form.appendChild(input)
-        })
-        document.body.appendChild(form)
-        form.submit()
-        document.body.removeChild(form)
+        if (launch.type === 'urlscheme') {
+          if (isMobileBrowser()) {
+            window.location.href = launch.url
+            toast.success(t('Redirecting to payment page...'))
+            props.onOpenChange(false)
+            return
+          }
+          setPaymentQrContent(launch.qrContent)
+          toast.success(t('Please scan the QR code to pay'))
+          return
+        }
+        if (launch.type === 'form') {
+          postPaymentForm(launch.url, launch.params)
+        } else {
+          openPaymentURL(launch.url)
+        }
         toast.success(t('Payment initiated'))
         props.onOpenChange(false)
       } else {
@@ -253,7 +268,12 @@ export function SubscriptionPurchaseDialog(props: Props) {
     }
   }
 
+  const selectedEpayPaymentMethod = (props.epayMethods || []).find(
+    (m) => m.type === selectedEpayMethod
+  )
+
   return (
+    <>
     <Dialog
       open={props.open}
       onOpenChange={props.onOpenChange}
@@ -438,5 +458,28 @@ export function SubscriptionPurchaseDialog(props: Props) {
         )}
       </div>
     </Dialog>
+
+    <PaymentQrDialog
+      open={!!paymentQrContent}
+      onOpenChange={(open) => {
+        if (!open) {
+          setPaymentQrContent(null)
+        }
+      }}
+      qrContent={paymentQrContent || ''}
+      paymentMethod={
+        selectedEpayPaymentMethod
+          ? {
+              type: selectedEpayPaymentMethod.type,
+              name: selectedEpayPaymentMethod.name || selectedEpayPaymentMethod.type,
+            }
+          : undefined
+      }
+      onPaid={() => {
+        void props.onPurchaseSuccess?.()
+        props.onOpenChange(false)
+      }}
+    />
+    </>
   )
 }

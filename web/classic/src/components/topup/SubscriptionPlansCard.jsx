@@ -23,6 +23,7 @@ import {
   Button,
   Card,
   Divider,
+  Modal,
   Select,
   Skeleton,
   Space,
@@ -30,6 +31,7 @@ import {
   Tooltip,
   Typography,
 } from '@douyinfe/semi-ui';
+import { QRCodeSVG } from 'qrcode.react';
 import { API, showError, showSuccess, renderQuota } from '../../helpers';
 import { getCurrencyConfig } from '../../helpers/render';
 import { RefreshCw, Sparkles } from 'lucide-react';
@@ -48,25 +50,123 @@ function getEpayMethods(payMethods = []) {
   );
 }
 
-// 提交易支付表单
-function submitEpayForm({ url, params }) {
-  const form = document.createElement('form');
-  form.action = url;
-  form.method = 'POST';
+function isMobileBrowser() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent,
+  );
+}
+
+function looksLikePaymentQRContent(raw) {
+  const s = (raw || '').trim().toLowerCase();
+  if (!s) return false;
+  if (
+    s.startsWith('weixin://') ||
+    s.startsWith('wxp://') ||
+    s.startsWith('alipays://') ||
+    s.startsWith('alipay://')
+  ) {
+    return true;
+  }
+  return (
+    s.includes('qr.alipay.com') ||
+    s.includes('render.alipay.com') ||
+    s.includes('qr.weixin.qq.com') ||
+    s.includes('wx.tenpay.com')
+  );
+}
+
+function isURLScheme(raw) {
+  const s = (raw || '').trim().toLowerCase();
+  return (
+    s.startsWith('alipays://') ||
+    s.startsWith('alipay://') ||
+    s.startsWith('weixin://') ||
+    s.startsWith('wxp://')
+  );
+}
+
+function buildPaymentQRContent(raw) {
+  const value = (raw || '').trim();
+  if (!value) return value;
+  const lower = value.toLowerCase();
+  if (lower.startsWith('alipays://') || lower.startsWith('alipay://')) {
+    return `https://render.alipay.com/p/s/i?scheme=${encodeURIComponent(value)}`;
+  }
+  return value;
+}
+
+function resolveEpayLaunch(url, params, payType) {
+  const safeParams = params || {};
+  const entries = Object.entries(safeParams).filter(
+    ([, value]) => value !== undefined && value !== null && value !== '',
+  );
+  const normalizedType = (payType || '').toLowerCase().trim();
+  if (entries.length > 0 || normalizedType === 'form') {
+    return { type: 'form', url, params: safeParams };
+  }
+  if (
+    normalizedType === 'qrcode' ||
+    (!normalizedType && looksLikePaymentQRContent(url))
+  ) {
+    return { type: 'qrcode', content: buildPaymentQRContent(url) };
+  }
+  if (normalizedType === 'urlscheme' || isURLScheme(url)) {
+    return {
+      type: 'urlscheme',
+      url,
+      qrContent: buildPaymentQRContent(url),
+    };
+  }
+  if (looksLikePaymentQRContent(url)) {
+    return { type: 'qrcode', content: buildPaymentQRContent(url) };
+  }
+  return { type: 'url', url };
+}
+
+// 提交易支付表单；mapi 返回 payurl 时 params 为空，直接打开链接
+// 返回 { mode: 'redirect' | 'qrcode', qrContent? }
+function submitEpayForm({ url, params, payType }) {
   const isSafari =
     navigator.userAgent.indexOf('Safari') > -1 &&
     navigator.userAgent.indexOf('Chrome') < 1;
-  if (!isSafari) form.target = '_blank';
-  Object.keys(params || {}).forEach((key) => {
-    const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = key;
-    input.value = params[key];
-    form.appendChild(input);
-  });
-  document.body.appendChild(form);
-  form.submit();
-  document.body.removeChild(form);
+  const launch = resolveEpayLaunch(url, params, payType);
+  if (launch.type === 'qrcode') {
+    return { mode: 'qrcode', qrContent: launch.content };
+  }
+  if (launch.type === 'urlscheme') {
+    if (isMobileBrowser()) {
+      window.location.href = launch.url;
+      return { mode: 'redirect' };
+    }
+    return { mode: 'qrcode', qrContent: launch.qrContent };
+  }
+  if (launch.type === 'form') {
+    const form = document.createElement('form');
+    form.action = launch.url;
+    form.method = 'POST';
+    if (!isSafari) form.target = '_blank';
+    Object.entries(launch.params || {})
+      .filter(
+        ([, value]) => value !== undefined && value !== null && value !== '',
+      )
+      .forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value;
+        form.appendChild(input);
+      });
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+    return { mode: 'redirect' };
+  }
+  if (isSafari) {
+    window.location.href = launch.url;
+  } else {
+    window.open(launch.url, '_blank');
+  }
+  return { mode: 'redirect' };
 }
 
 const SubscriptionPlansCard = ({
@@ -89,6 +189,7 @@ const SubscriptionPlansCard = ({
   const [paying, setPaying] = useState(false);
   const [selectedEpayMethod, setSelectedEpayMethod] = useState('');
   const [refreshing, setRefreshing] = useState(false);
+  const [paymentQrContent, setPaymentQrContent] = useState('');
 
   const epayMethods = useMemo(() => getEpayMethods(payMethods), [payMethods]);
 
@@ -181,9 +282,18 @@ const SubscriptionPlansCard = ({
         payment_method: selectedEpayMethod,
       });
       if (res.data?.message === 'success') {
-        submitEpayForm({ url: res.data.url, params: res.data.data });
-        showSuccess(t('已发起支付'));
-        closeBuy();
+        const result = submitEpayForm({
+          url: res.data.url,
+          params: res.data.data,
+          payType: res.data.pay_type,
+        });
+        if (result?.mode === 'qrcode') {
+          setPaymentQrContent(result.qrContent);
+          showSuccess(t('请使用手机扫码完成支付'));
+        } else {
+          showSuccess(t('已发起支付'));
+          closeBuy();
+        }
       } else {
         const errorMsg =
           typeof res.data?.data === 'string'
@@ -685,6 +795,40 @@ const SubscriptionPlansCard = ({
         onPayCreem={payCreem}
         onPayEpay={payEpay}
       />
+
+      {/* 扫码支付（支付宝/微信 mapi 返回 qrcode 时） */}
+      <Modal
+        title={t('请扫码支付')}
+        visible={!!paymentQrContent}
+        onCancel={() => setPaymentQrContent('')}
+        onOk={async () => {
+          setPaymentQrContent('');
+          try {
+            await reloadSubscriptionSelf?.();
+          } catch (_e) {
+            // ignore
+          }
+          closeBuy();
+        }}
+        okText={t('我已支付')}
+        cancelText={t('关闭')}
+        maskClosable={false}
+        size='small'
+        centered
+      >
+        <div className='flex flex-col items-center gap-3 py-2'>
+          <p className='text-sm text-gray-500 text-center'>
+            {t(
+              '请使用支付宝或微信扫描下方二维码完成支付。支付完成后点击“我已支付”。',
+            )}
+          </p>
+          {paymentQrContent ? (
+            <div className='bg-white p-3 rounded-lg border'>
+              <QRCodeSVG value={paymentQrContent} size={200} level='M' />
+            </div>
+          ) : null}
+        </div>
+      </Modal>
     </>
   );
 };

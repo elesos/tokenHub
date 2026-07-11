@@ -3,7 +3,7 @@ name: i18n-translate
 description: >-
   Complete and maintain frontend i18n translations for this project. Covers
   finding missing translation keys, detecting untranslated entries, and adding
-  translations for all supported locales (en, zh, fr, ja, ru, vi). Use when the
+  translations for all supported locales (en, zh). Use when the
   user asks to add translations, fix i18n, complete missing translations, or
   when new UI text needs to be internationalized.
 ---
@@ -12,7 +12,7 @@ description: >-
 
 ## Overview
 
-- Locale files: `web/default/src/i18n/locales/{en,zh,fr,ja,ru,vi}.json`
+- Locale files: `web/default/src/i18n/locales/{en,zh}.json`
 - Format: flat JSON under `"translation"` key, keys are English source strings
 - Base locale: `en.json` (most keys), fallback: `zh` (Chinese)
 - Sync script: `bun run i18n:sync` (from `web/default/`)
@@ -124,7 +124,7 @@ const brandNames = new Set([
   'WeChat','Xinference','Xunfei','AI Proxy','One API',
 ])
 
-const locales = ['fr', 'ja', 'ru', 'zh', 'vi']
+const locales = ['zh']
 
 for (const locale of locales) {
   const locFile = JSON.parse(await fs.readFile(path.join(LOCALES_DIR, `${locale}.json`), 'utf8'))
@@ -168,10 +168,6 @@ function stableStringify(obj) {
 const newKeys = {
   en: { /* "key": "English value" */ },
   zh: { /* "key": "中文翻译" */ },
-  fr: { /* "key": "Traduction française" */ },
-  ja: { /* "key": "日本語翻訳" */ },
-  ru: { /* "key": "Русский перевод" */ },
-  vi: { /* "key": "Bản dịch tiếng Việt" */ },
 }
 
 async function main() {
@@ -227,11 +223,7 @@ Delete temporary scripts after completion.
 | Language | Code | Notes |
 |----------|------|-------|
 | English | en | Base locale, key = value |
-| Chinese | zh | Fallback locale, must be complete |
-| French | fr | Many English cognates are valid (e.g., "Configuration") |
-| Japanese | ja | Use katakana for technical loanwords |
-| Russian | ru | Use formal register |
-| Vietnamese | vi | Use standard Vietnamese |
+| Chinese | zh | Fallback locale, must be complete (Simplified Chinese only) |
 
 **Keep as English (do not translate):**
 - Brand/product names (OpenAI, Claude, Gemini, etc.)

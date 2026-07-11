@@ -21,12 +21,13 @@ import i18n from 'i18next'
 import { useAuthStore } from '@/stores/auth-store'
 import { getSelf } from '@/lib/api'
 import type { User } from '@/features/users/types'
+import { normalizeInterfaceLanguage } from '@/i18n/languages'
 import { saveUserId } from '../lib/storage'
 
 function getSavedLanguage(user: User): string | undefined {
   const userData = user as Record<string, unknown>
   if (typeof userData.language === 'string') {
-    return userData.language
+    return normalizeInterfaceLanguage(userData.language)
   }
 
   if (typeof userData.setting !== 'string') {
@@ -35,7 +36,9 @@ function getSavedLanguage(user: User): string | undefined {
 
   try {
     const setting = JSON.parse(userData.setting) as { language?: unknown }
-    return typeof setting.language === 'string' ? setting.language : undefined
+    return typeof setting.language === 'string'
+      ? normalizeInterfaceLanguage(setting.language)
+      : undefined
   } catch {
     return undefined
   }

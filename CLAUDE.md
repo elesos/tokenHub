@@ -47,7 +47,7 @@ web/             — Frontend themes container
 
 ### Frontend (`web/default/src/i18n/`)
 - Library: `i18next` + `react-i18next` + `i18next-browser-languagedetector`
-- Languages: en (base), zh (fallback), fr, ru, ja, vi
+- Languages: en (base), zh (fallback)
 - Translation files: `web/default/src/i18n/locales/{lang}.json` — flat JSON, keys are English source strings
 - Usage: `useTranslation()` hook, call `t('English key')` in components
 - CLI tools: `bun run i18n:sync` (from `web/default/`)

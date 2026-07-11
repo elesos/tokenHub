@@ -3,7 +3,7 @@ package setting
 import (
 	"encoding/json"
 
-	"github.com/QuantumNous/tokenHub/common"
+	"github.com/elesos/tokenHub/common"
 )
 
 var Chats = []map[string]string{

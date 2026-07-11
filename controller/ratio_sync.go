@@ -16,13 +16,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/logger"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/logger"
 
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/setting/billing_setting"
-	"github.com/QuantumNous/tokenHub/setting/ratio_setting"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/setting/billing_setting"
+	"github.com/elesos/tokenHub/setting/ratio_setting"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"

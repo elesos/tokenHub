@@ -31,10 +31,10 @@
 
 <p align="center">
   <a href="https://trendshift.io/repositories/20180" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QuantumNous%2Fnew-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+    <img src="https://trendshift.io/api/badge/repositories/20180" alt="elesos%2Fnew-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
   </a>
   <br>
-  <a href="https://hellogithub.com/repository/QuantumNous/tokenHub" target="_blank">
+  <a href="https://hellogithub.com/repository/elesos/tokenHub" target="_blank">
     <img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=539ac4217e69431684ad4a0bab768811&claim_uid=tbFPfKIDHpc4TzR" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" />
   </a><!--
   --><a href="https://www.producthunt.com/products/tokenHub/launches/tokenHub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-tokenHub" target="_blank" rel="noopener noreferrer">
@@ -111,7 +111,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/QuantumNous/tokenHub.git
+git clone https://x.com/Awesome_AI_News.git
 cd tokenHub
 
 # Edit docker-compose.yml configuration
@@ -163,7 +163,7 @@ docker run --name tokenHub -d --restart always \
 
 <div align="center">
 
-### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/tokenHub)
+### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/elesos/tokenHub)
 
 </div>
 
@@ -341,7 +341,7 @@ docker run --name tokenHub -d --restart always \
 
 ```bash
 # Clone the project
-git clone https://github.com/QuantumNous/tokenHub.git
+git clone https://x.com/Awesome_AI_News.git
 cd tokenHub
 
 # Edit configuration
@@ -458,7 +458,7 @@ contributors.` in the appropriate legal notices and in any prominent about,
 legal, footer, or attribution location presented by the user interface.
 
 Modified versions that present a user interface must also preserve a visible
-link to the original project: <https://github.com/QuantumNous/tokenHub>.
+link to the original project: <https://x.com/Awesome_AI_News>.
 
 This is an open-source project developed based on [One API](https://github.com/songquanpeng/one-api) (MIT License).
 
@@ -484,6 +484,6 @@ If this project is helpful to you, welcome to give us a ⭐️ Star！
 
 **[Official Documentation](https://docs.newapi.pro/en/docs)** • **[Issue Feedback](https://github.com/Calcium-Ion/tokenHub/issues)** • **[Latest Release](https://github.com/Calcium-Ion/tokenHub/releases)**
 
-<sub>Built with ❤️ by QuantumNous</sub>
+<sub>Built with ❤️ by elesos</sub>
 
 </div>

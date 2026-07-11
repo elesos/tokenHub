@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/QuantumNous/tokenHub/setting/config"
+import "github.com/elesos/tokenHub/setting/config"
 
 // TokenSetting 令牌相关配置
 type TokenSetting struct {

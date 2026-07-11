@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/dto"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/dto"
 	"github.com/gin-gonic/gin"
 )
 

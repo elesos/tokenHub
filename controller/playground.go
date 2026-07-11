@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/QuantumNous/tokenHub/middleware"
-	"github.com/QuantumNous/tokenHub/model"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/middleware"
+	"github.com/elesos/tokenHub/model"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/types"
 
 	"github.com/gin-gonic/gin"
 )

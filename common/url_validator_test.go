@@ -3,7 +3,7 @@ package common
 import (
 	"testing"
 
-	"github.com/QuantumNous/tokenHub/constant"
+	"github.com/elesos/tokenHub/constant"
 )
 
 func TestValidateRedirectURL(t *testing.T) {

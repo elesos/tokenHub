@@ -3,10 +3,10 @@ package middleware
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/i18n"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/i18n"
 )
 
 // I18n middleware detects and sets the language preference for the request

@@ -1,8 +1,8 @@
 package model
 
 import (
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/setting/ratio_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/setting/ratio_setting"
 )
 
 func IsChannelEnabledForGroupModel(group string, modelName string, channelID int) bool {

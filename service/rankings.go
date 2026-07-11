@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/model"
+	"github.com/elesos/tokenHub/model"
 )
 
 const (

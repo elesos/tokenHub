@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/model"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/model"
 	"github.com/glebarez/sqlite"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

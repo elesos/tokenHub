@@ -13,8 +13,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/model"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/model"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

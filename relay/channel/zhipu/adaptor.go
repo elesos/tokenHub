@@ -6,10 +6,10 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/relay/channel"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/relay/channel"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/types"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"

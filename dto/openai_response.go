@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/types"
 )
 
 const (

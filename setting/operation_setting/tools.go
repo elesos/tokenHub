@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/QuantumNous/tokenHub/setting/config"
+	"github.com/elesos/tokenHub/setting/config"
 )
 
 // ---------------------------------------------------------------------------

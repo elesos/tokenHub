@@ -9,18 +9,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/model"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/model"
 	"github.com/gin-gonic/gin"
 
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/relay/channel"
-	geminitask "github.com/QuantumNous/tokenHub/relay/channel/task/gemini"
-	taskcommon "github.com/QuantumNous/tokenHub/relay/channel/task/taskcommon"
-	vertexcore "github.com/QuantumNous/tokenHub/relay/channel/vertex"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
-	"github.com/QuantumNous/tokenHub/service"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/relay/channel"
+	geminitask "github.com/elesos/tokenHub/relay/channel/task/gemini"
+	taskcommon "github.com/elesos/tokenHub/relay/channel/task/taskcommon"
+	vertexcore "github.com/elesos/tokenHub/relay/channel/vertex"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/service"
 )
 
 // ============================

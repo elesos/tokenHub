@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/middleware"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/middleware"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,7 +1,7 @@
 package helper
 
 import (
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
 )
 
 // StreamResult is passed to each dataHandler invocation, providing methods

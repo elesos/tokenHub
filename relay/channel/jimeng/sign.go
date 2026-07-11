@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/logger"
+	"github.com/elesos/tokenHub/logger"
 	"github.com/gin-gonic/gin"
 )
 

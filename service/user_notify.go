@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/setting/system_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/setting/system_setting"
 )
 
 func NotifyRootUser(t string, subject string, content string) {

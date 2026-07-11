@@ -4,7 +4,7 @@ import (
 	"database/sql/driver"
 	"encoding/json"
 
-	"github.com/QuantumNous/tokenHub/common"
+	"github.com/elesos/tokenHub/common"
 
 	"gorm.io/gorm"
 )

@@ -1,11 +1,11 @@
 package router
 
 import (
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/controller"
-	"github.com/QuantumNous/tokenHub/middleware"
-	"github.com/QuantumNous/tokenHub/relay"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/controller"
+	"github.com/elesos/tokenHub/middleware"
+	"github.com/elesos/tokenHub/relay"
+	"github.com/elesos/tokenHub/types"
 
 	"github.com/gin-gonic/gin"
 )

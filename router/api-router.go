@@ -1,11 +1,11 @@
 package router
 
 import (
-	"github.com/QuantumNous/tokenHub/controller"
-	"github.com/QuantumNous/tokenHub/middleware"
+	"github.com/elesos/tokenHub/controller"
+	"github.com/elesos/tokenHub/middleware"
 
 	// Import oauth package to register providers via init()
-	_ "github.com/QuantumNous/tokenHub/oauth"
+	_ "github.com/elesos/tokenHub/oauth"
 
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"

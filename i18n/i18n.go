@@ -10,9 +10,9 @@ import (
 	"golang.org/x/text/language"
 	"gopkg.in/yaml.v3"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/dto"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/dto"
 )
 
 const (

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
 	"github.com/stretchr/testify/require"
 )
 

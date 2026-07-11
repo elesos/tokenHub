@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/constant"
+	"github.com/elesos/tokenHub/constant"
 )
 
 // ValidateRedirectURL validates that a redirect URL is safe to use.

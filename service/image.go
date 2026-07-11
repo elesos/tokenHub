@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
 
 	"golang.org/x/image/webp"
 )

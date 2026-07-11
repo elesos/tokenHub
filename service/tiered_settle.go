@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/pkg/billingexpr"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/pkg/billingexpr"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
 )
 
 // TieredResultWrapper wraps billingexpr.TieredResult for use at the service layer.

@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/constant"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/constant"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
 	"github.com/gin-gonic/gin"
 )
 

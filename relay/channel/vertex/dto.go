@@ -3,7 +3,7 @@ package vertex
 import (
 	"encoding/json"
 
-	"github.com/QuantumNous/tokenHub/dto"
+	"github.com/elesos/tokenHub/dto"
 )
 
 type VertexAIClaudeRequest struct {

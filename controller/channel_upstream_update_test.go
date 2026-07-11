@@ -3,8 +3,8 @@ package controller
 import (
 	"testing"
 
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/model"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/model"
 	"github.com/stretchr/testify/require"
 )
 

@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2023-2026 QuantumNous
+Copyright (C) 2023-2026 elesos
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -59,17 +59,17 @@ function EmptyAboutState() {
           <p>
             {t('Token Hub Project Repository:')}{' '}
             <a
-              href='https://github.com/QuantumNous/tokenHub'
+              href='https://x.com/Awesome_AI_News'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:underline'
             >
-              {t('https://github.com/QuantumNous/tokenHub')}
+              {t('https://x.com/Awesome_AI_News')}
             </a>
           </p>
           <p className='text-muted-foreground'>
             <a
-              href='https://github.com/QuantumNous/tokenHub'
+              href='https://x.com/Awesome_AI_News'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:underline'
@@ -78,12 +78,12 @@ function EmptyAboutState() {
             </a>{' '}
             © {currentYear}{' '}
             <a
-              href='https://github.com/QuantumNous'
+              href='https://github.com/elesos'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:underline'
             >
-              {t('QuantumNous')}
+              {t('elesos')}
             </a>{' '}
             {t('| Based on')}{' '}
             <a
@@ -107,7 +107,7 @@ function EmptyAboutState() {
           <p className='text-muted-foreground'>
             {t('This project must be used in compliance with the')}{' '}
             <a
-              href='https://github.com/QuantumNous/tokenHub/blob/main/LICENSE'
+              href='https://x.com/Awesome_AI_News/blob/main/LICENSE'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:underline'

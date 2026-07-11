@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/relay"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/relay"
 )
 
 func getGeminiVideoURL(channel *model.Channel, task *model.Task, apiKey string) (string, error) {

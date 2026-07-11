@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/QuantumNous/tokenHub/common"
+	"github.com/elesos/tokenHub/common"
 )
 
 var userUsableGroups = map[string]string{

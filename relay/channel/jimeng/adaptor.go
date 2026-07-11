@@ -7,12 +7,12 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/relay/channel"
-	"github.com/QuantumNous/tokenHub/relay/channel/openai"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
-	relayconstant "github.com/QuantumNous/tokenHub/relay/constant"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/relay/channel"
+	"github.com/elesos/tokenHub/relay/channel/openai"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
+	relayconstant "github.com/elesos/tokenHub/relay/constant"
+	"github.com/elesos/tokenHub/types"
 
 	"github.com/gin-gonic/gin"
 )

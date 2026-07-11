@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/QuantumNous/tokenHub/controller"
-	"github.com/QuantumNous/tokenHub/middleware"
+	"github.com/elesos/tokenHub/controller"
+	"github.com/elesos/tokenHub/middleware"
 
 	"github.com/gin-gonic/gin"
 )

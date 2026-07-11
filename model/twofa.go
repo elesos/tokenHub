@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
+	"github.com/elesos/tokenHub/common"
 
 	"gorm.io/gorm"
 )

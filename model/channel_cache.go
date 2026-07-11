@@ -9,10 +9,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/logger"
-	"github.com/QuantumNous/tokenHub/setting/ratio_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/logger"
+	"github.com/elesos/tokenHub/setting/ratio_setting"
 )
 
 var group2model2channels map[string]map[string][]int // enabled channel

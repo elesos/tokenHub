@@ -1,6 +1,6 @@
 package siliconflow
 
-import "github.com/QuantumNous/tokenHub/dto"
+import "github.com/elesos/tokenHub/dto"
 
 type SFTokens struct {
 	InputTokens  int `json:"input_tokens"`

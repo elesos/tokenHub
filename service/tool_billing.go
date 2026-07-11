@@ -3,8 +3,8 @@ package service
 import (
 	"math"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/setting/operation_setting"
 )
 
 // ToolCallUsage captures all tool call counts from a single request.

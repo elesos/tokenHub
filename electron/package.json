@@ -18,10 +18,10 @@
     "openai",
     "claude"
   ],
-  "author": "QuantumNous",
+  "author": "elesos",
   "repository": {
     "type": "git",
-    "url": "https://github.com/QuantumNous/tokenHub"
+    "url": "https://x.com/Awesome_AI_News"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

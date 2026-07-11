@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/dto"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/dto"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
 
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"

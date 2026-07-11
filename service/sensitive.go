@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/setting"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/setting"
 )
 
 func CheckSensitiveMessages(messages []dto.Message) ([]string, error) {

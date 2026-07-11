@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/controller"
-	"github.com/QuantumNous/tokenHub/middleware"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/controller"
+	"github.com/elesos/tokenHub/middleware"
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"

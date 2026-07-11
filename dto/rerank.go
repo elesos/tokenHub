@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/types"
 	"github.com/gin-gonic/gin"
 )
 

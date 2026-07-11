@@ -106,7 +106,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/QuantumNous/tokenHub.git
+git clone https://x.com/Awesome_AI_News.git
 cd tokenHub
 
 # Edit docker-compose.yml configuration
@@ -158,7 +158,7 @@ docker run --name tokenHub -d --restart always \
 
 <div align="center">
 
-### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/tokenHub)
+### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/elesos/tokenHub)
 
 </div>
 
@@ -333,7 +333,7 @@ docker run --name tokenHub -d --restart always \
 
 ```bash
 # Clone the project
-git clone https://github.com/QuantumNous/tokenHub.git
+git clone https://x.com/Awesome_AI_News.git
 cd tokenHub
 
 # Edit configuration
@@ -458,6 +458,6 @@ If this project is helpful to you, welcome to give us a ⭐️ Star！
 
 **[Official Documentation](https://docs.newapi.pro/en/docs)** • **[Issue Feedback](https://github.com/Calcium-Ion/tokenHub/issues)** • **[Latest Release](https://github.com/Calcium-Ion/tokenHub/releases)**
 
-<sub>Built with ❤️ by QuantumNous</sub>
+<sub>Built with ❤️ by elesos</sub>
 
 </div>

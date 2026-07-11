@@ -5,7 +5,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/tokenHub/constant"
+	"github.com/elesos/tokenHub/constant"
 	"github.com/andybalholm/brotli"
 	"github.com/gin-gonic/gin"
 )

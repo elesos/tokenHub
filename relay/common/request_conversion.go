@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/types"
 )
 
 func GuessRelayFormatFromRequest(req any) (types.RelayFormat, bool) {

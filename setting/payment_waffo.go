@@ -1,8 +1,8 @@
 package setting
 
 import (
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
 )
 
 var (

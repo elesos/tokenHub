@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/QuantumNous/tokenHub/types"
+import "github.com/elesos/tokenHub/types"
 
 const (
 	RealtimeEventTypeError              = "error"

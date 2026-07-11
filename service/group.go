@@ -3,8 +3,8 @@ package service
 import (
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/setting"
-	"github.com/QuantumNous/tokenHub/setting/ratio_setting"
+	"github.com/elesos/tokenHub/setting"
+	"github.com/elesos/tokenHub/setting/ratio_setting"
 )
 
 func GetUserUsableGroups(userGroup string) map[string]string {

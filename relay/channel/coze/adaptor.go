@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/relay/channel"
-	"github.com/QuantumNous/tokenHub/relay/common"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/relay/channel"
+	"github.com/elesos/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/types"
 
 	"github.com/gin-gonic/gin"
 )

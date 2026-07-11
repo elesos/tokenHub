@@ -1,7 +1,7 @@
 package ratio_setting
 
 import (
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/types"
 )
 
 var defaultCacheRatio = map[string]float64{

@@ -3,8 +3,8 @@ package zhipu_4v
 import (
 	"time"
 
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/types"
 )
 
 //	type ZhipuMessage struct {

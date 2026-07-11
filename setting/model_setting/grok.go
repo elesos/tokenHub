@@ -1,6 +1,6 @@
 package model_setting
 
-import "github.com/QuantumNous/tokenHub/setting/config"
+import "github.com/elesos/tokenHub/setting/config"
 
 // GrokSettings defines Grok model configuration.
 type GrokSettings struct {

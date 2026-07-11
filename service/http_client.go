@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/setting/system_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/setting/system_setting"
 
 	"golang.org/x/net/proxy"
 )

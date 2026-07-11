@@ -6,14 +6,14 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/i18n"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/setting"
-	"github.com/QuantumNous/tokenHub/setting/console_setting"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
-	"github.com/QuantumNous/tokenHub/setting/ratio_setting"
-	"github.com/QuantumNous/tokenHub/setting/system_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/i18n"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/setting"
+	"github.com/elesos/tokenHub/setting/console_setting"
+	"github.com/elesos/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/setting/ratio_setting"
+	"github.com/elesos/tokenHub/setting/system_setting"
 
 	"github.com/gin-gonic/gin"
 )

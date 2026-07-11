@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/QuantumNous/tokenHub/common"
+	"github.com/elesos/tokenHub/common"
 
 	"github.com/samber/lo"
 	"gorm.io/gorm"

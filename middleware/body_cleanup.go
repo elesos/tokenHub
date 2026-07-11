@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/service"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/service"
 	"github.com/gin-gonic/gin"
 )
 

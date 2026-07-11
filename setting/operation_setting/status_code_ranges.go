@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/types"
 )
 
 type StatusCodeRange struct {

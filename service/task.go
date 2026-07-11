@@ -3,7 +3,7 @@ package service
 import (
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/constant"
+	"github.com/elesos/tokenHub/constant"
 )
 
 func CoverTaskActionToModelName(platform constant.TaskPlatform, action string) string {

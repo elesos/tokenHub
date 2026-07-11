@@ -3,7 +3,7 @@ package oauth
 import (
 	"context"
 
-	"github.com/QuantumNous/tokenHub/model"
+	"github.com/elesos/tokenHub/model"
 	"github.com/gin-gonic/gin"
 )
 

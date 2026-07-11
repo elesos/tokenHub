@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/Calcium-Ion/go-epay/epay"
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
-	"github.com/QuantumNous/tokenHub/setting/system_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/setting/system_setting"
 )
 
 func GetCallbackAddress() string {

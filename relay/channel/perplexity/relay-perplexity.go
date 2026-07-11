@@ -1,6 +1,6 @@
 package perplexity
 
-import "github.com/QuantumNous/tokenHub/dto"
+import "github.com/elesos/tokenHub/dto"
 
 func requestOpenAI2Perplexity(request dto.GeneralOpenAIRequest) *dto.GeneralOpenAIRequest {
 	messages := make([]dto.Message, 0, len(request.Messages))

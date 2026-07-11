@@ -1,6 +1,6 @@
 package xai
 
-import "github.com/QuantumNous/tokenHub/dto"
+import "github.com/elesos/tokenHub/dto"
 
 // ChatCompletionResponse represents the response from XAI chat completion API
 type ChatCompletionResponse struct {

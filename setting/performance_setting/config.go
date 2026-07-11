@@ -1,8 +1,8 @@
 package performance_setting
 
 import (
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/setting/config"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/setting/config"
 )
 
 // PerformanceSetting 性能设置配置

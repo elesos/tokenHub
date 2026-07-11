@@ -3,8 +3,8 @@ package billing_setting
 import (
 	"fmt"
 
-	"github.com/QuantumNous/tokenHub/pkg/billingexpr"
-	"github.com/QuantumNous/tokenHub/setting/config"
+	"github.com/elesos/tokenHub/pkg/billingexpr"
+	"github.com/elesos/tokenHub/setting/config"
 	"github.com/samber/lo"
 )
 

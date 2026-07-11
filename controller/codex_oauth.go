@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/relay/channel/codex"
-	"github.com/QuantumNous/tokenHub/service"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/relay/channel/codex"
+	"github.com/elesos/tokenHub/service"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

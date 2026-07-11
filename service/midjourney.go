@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/logger"
-	relayconstant "github.com/QuantumNous/tokenHub/relay/constant"
-	"github.com/QuantumNous/tokenHub/setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/logger"
+	relayconstant "github.com/elesos/tokenHub/relay/constant"
+	"github.com/elesos/tokenHub/setting"
 
 	"github.com/gin-gonic/gin"
 )

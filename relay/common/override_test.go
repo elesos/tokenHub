@@ -6,11 +6,11 @@ import (
 	"reflect"
 	"testing"
 
-	common2 "github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/types"
+	common2 "github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/types"
 
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/setting/model_setting"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/setting/model_setting"
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/require"
 )

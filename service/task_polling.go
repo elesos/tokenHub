@@ -10,13 +10,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/logger"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/relay/channel/task/taskcommon"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/logger"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/relay/channel/task/taskcommon"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
 
 	"github.com/samber/lo"
 )

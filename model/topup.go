@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/logger"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/logger"
 
 	"github.com/shopspring/decimal"
 	"gorm.io/gorm"

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/service/openaicompat"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/service/openaicompat"
 )
 
 func ChatCompletionsRequestToResponsesRequest(req *dto.GeneralOpenAIRequest) (*dto.OpenAIResponsesRequest, error) {

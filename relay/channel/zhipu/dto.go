@@ -3,7 +3,7 @@ package zhipu
 import (
 	"time"
 
-	"github.com/QuantumNous/tokenHub/dto"
+	"github.com/elesos/tokenHub/dto"
 )
 
 type ZhipuMessage struct {

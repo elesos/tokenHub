@@ -1,4 +1,4 @@
-module github.com/QuantumNous/tokenHub
+module github.com/elesos/tokenHub
 
 // +heroku goVersion go1.18
 go 1.25.1

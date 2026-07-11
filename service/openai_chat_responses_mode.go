@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/QuantumNous/tokenHub/service/openaicompat"
-	"github.com/QuantumNous/tokenHub/setting/model_setting"
+	"github.com/elesos/tokenHub/service/openaicompat"
+	"github.com/elesos/tokenHub/setting/model_setting"
 )
 
 func ShouldChatCompletionsUseResponsesPolicy(policy model_setting.ChatCompletionsToResponsesPolicy, channelID int, channelType int, model string) bool {

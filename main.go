@@ -11,20 +11,20 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/controller"
-	"github.com/QuantumNous/tokenHub/i18n"
-	"github.com/QuantumNous/tokenHub/logger"
-	"github.com/QuantumNous/tokenHub/middleware"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/oauth"
-	perfmetrics "github.com/QuantumNous/tokenHub/pkg/perf_metrics"
-	"github.com/QuantumNous/tokenHub/relay"
-	"github.com/QuantumNous/tokenHub/router"
-	"github.com/QuantumNous/tokenHub/service"
-	_ "github.com/QuantumNous/tokenHub/setting/performance_setting"
-	"github.com/QuantumNous/tokenHub/setting/ratio_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/controller"
+	"github.com/elesos/tokenHub/i18n"
+	"github.com/elesos/tokenHub/logger"
+	"github.com/elesos/tokenHub/middleware"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/oauth"
+	perfmetrics "github.com/elesos/tokenHub/pkg/perf_metrics"
+	"github.com/elesos/tokenHub/relay"
+	"github.com/elesos/tokenHub/router"
+	"github.com/elesos/tokenHub/service"
+	_ "github.com/elesos/tokenHub/setting/performance_setting"
+	"github.com/elesos/tokenHub/setting/ratio_setting"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gin-contrib/sessions"
@@ -224,7 +224,7 @@ func InjectUmamiAnalytics() {
 		analyticsInjectBuilder.WriteString(umamiSiteID)
 		analyticsInjectBuilder.WriteString("\"></script>")
 	}
-	analyticsInjectBuilder.WriteString("<!--Umami QuantumNous-->\n")
+	analyticsInjectBuilder.WriteString("<!--Umami elesos-->\n")
 	analyticsInject := []byte(analyticsInjectBuilder.String())
 	placeholder := []byte("<!--umami-->\n")
 	indexPage = bytes.ReplaceAll(indexPage, placeholder, analyticsInject)
@@ -248,7 +248,7 @@ func InjectGoogleAnalytics() {
 		analyticsInjectBuilder.WriteString("');")
 		analyticsInjectBuilder.WriteString("</script>")
 	}
-	analyticsInjectBuilder.WriteString("<!--Google Analytics QuantumNous-->\n")
+	analyticsInjectBuilder.WriteString("<!--Google Analytics elesos-->\n")
 	analyticsInject := []byte(analyticsInjectBuilder.String())
 	placeholder := []byte("<!--Google Analytics-->\n")
 	indexPage = bytes.ReplaceAll(indexPage, placeholder, analyticsInject)

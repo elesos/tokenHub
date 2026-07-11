@@ -3,8 +3,8 @@ package controller
 import (
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/setting"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/setting"
+	"github.com/elesos/tokenHub/setting/operation_setting"
 )
 
 func isPaymentComplianceConfirmed() bool {

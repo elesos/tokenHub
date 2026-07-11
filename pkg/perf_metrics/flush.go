@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/setting/perf_metrics_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/setting/perf_metrics_setting"
 )
 
 func flushLoop() {

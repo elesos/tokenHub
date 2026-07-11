@@ -5,12 +5,12 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/pkg/billingexpr"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
-	"github.com/QuantumNous/tokenHub/setting/billing_setting"
-	"github.com/QuantumNous/tokenHub/setting/config"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/pkg/billingexpr"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/setting/billing_setting"
+	"github.com/elesos/tokenHub/setting/config"
+	"github.com/elesos/tokenHub/types"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 )

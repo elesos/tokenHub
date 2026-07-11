@@ -3,11 +3,11 @@ package service
 import (
 	"errors"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/logger"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/logger"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/setting"
 	"github.com/gin-gonic/gin"
 )
 

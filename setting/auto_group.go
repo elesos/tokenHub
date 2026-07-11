@@ -1,7 +1,7 @@
 package setting
 
 import (
-	"github.com/QuantumNous/tokenHub/common"
+	"github.com/elesos/tokenHub/common"
 )
 
 var autoGroups = []string{

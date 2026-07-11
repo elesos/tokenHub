@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/QuantumNous/tokenHub/setting/config"
+import "github.com/elesos/tokenHub/setting/config"
 
 type PaymentSetting struct {
 	AmountOptions  []int           `json:"amount_options"`

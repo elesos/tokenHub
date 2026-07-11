@@ -1,7 +1,7 @@
 package dify
 
 import (
-	"github.com/QuantumNous/tokenHub/dto"
+	"github.com/elesos/tokenHub/dto"
 )
 
 type DifyChatRequest struct {

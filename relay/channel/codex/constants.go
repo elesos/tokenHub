@@ -1,7 +1,7 @@
 package codex
 
 import (
-	"github.com/QuantumNous/tokenHub/setting/ratio_setting"
+	"github.com/elesos/tokenHub/setting/ratio_setting"
 	"github.com/samber/lo"
 )
 

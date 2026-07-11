@@ -5,13 +5,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/setting"
-	"github.com/QuantumNous/tokenHub/setting/config"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
-	"github.com/QuantumNous/tokenHub/setting/performance_setting"
-	"github.com/QuantumNous/tokenHub/setting/ratio_setting"
-	"github.com/QuantumNous/tokenHub/setting/system_setting"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/setting"
+	"github.com/elesos/tokenHub/setting/config"
+	"github.com/elesos/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/setting/performance_setting"
+	"github.com/elesos/tokenHub/setting/ratio_setting"
+	"github.com/elesos/tokenHub/setting/system_setting"
 	"gorm.io/gorm"
 )
 

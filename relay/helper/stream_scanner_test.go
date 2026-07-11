@@ -12,9 +12,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/constant"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/constant"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/setting/operation_setting"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

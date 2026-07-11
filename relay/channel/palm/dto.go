@@ -1,6 +1,6 @@
 package palm
 
-import "github.com/QuantumNous/tokenHub/dto"
+import "github.com/elesos/tokenHub/dto"
 
 type PaLMChatMessage struct {
 	Author  string `json:"author"`

@@ -20,7 +20,7 @@ RUN mkdir -p web/default/dist web/classic/dist && \
     echo '<!doctype html><html><head><title>dev</title></head><body>use frontend dev server</body></html>' > web/default/dist/index.html && \
     echo '<!doctype html><html><head><title>dev</title></head><body>use frontend dev server</body></html>' > web/classic/dist/index.html
 
-RUN go build -ldflags "-s -w -X 'github.com/QuantumNous/tokenHub/common.Version=$(cat VERSION)'" -o tokenHub
+RUN go build -ldflags "-s -w -X 'github.com/elesos/tokenHub/common.Version=$(cat VERSION)'" -o tokenHub
 
 FROM debian:bookworm-slim
 

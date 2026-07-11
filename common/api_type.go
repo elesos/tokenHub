@@ -1,6 +1,6 @@
 package common
 
-import "github.com/QuantumNous/tokenHub/constant"
+import "github.com/elesos/tokenHub/constant"
 
 func ChannelType2APIType(channelType int) (int, bool) {
 	apiType := -1

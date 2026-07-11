@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/setting/config"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/setting/config"
 )
 
 type PasskeySettings struct {

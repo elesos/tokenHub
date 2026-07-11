@@ -1,6 +1,6 @@
 package vertex
 
-import "github.com/QuantumNous/tokenHub/common"
+import "github.com/elesos/tokenHub/common"
 
 func GetModelRegion(other string, localModelName string) string {
 	// if other is json string

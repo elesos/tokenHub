@@ -3,7 +3,7 @@ package service
 import (
 	"time"
 
-	"github.com/QuantumNous/tokenHub/model"
+	"github.com/elesos/tokenHub/model"
 )
 
 // ---------------------------------------------------------------------------

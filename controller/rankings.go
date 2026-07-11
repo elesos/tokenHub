@@ -3,7 +3,7 @@ package controller
 import (
 	"net/http"
 
-	"github.com/QuantumNous/tokenHub/service"
+	"github.com/elesos/tokenHub/service"
 	"github.com/gin-gonic/gin"
 )
 

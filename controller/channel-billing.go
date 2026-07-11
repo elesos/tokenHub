@@ -9,12 +9,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/service"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/service"
+	"github.com/elesos/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/types"
 
 	"github.com/shopspring/decimal"
 

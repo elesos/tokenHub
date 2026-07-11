@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2025 QuantumNous
+Copyright (C) 2025 elesos
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -200,7 +200,7 @@ const FooterBar = () => {
               {t('设计与开发由')}{' '}
             </span>
             <a
-              href='https://github.com/QuantumNous/tokenHub'
+              href='https://x.com/Awesome_AI_News'
               target='_blank'
               rel='noopener noreferrer'
               className='!text-semi-color-primary font-medium'
@@ -232,7 +232,7 @@ const FooterBar = () => {
                 {t('设计与开发由')}{' '}
               </span>
               <a
-                href='https://github.com/QuantumNous/tokenHub'
+                href='https://x.com/Awesome_AI_News'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='!text-semi-color-primary font-medium'

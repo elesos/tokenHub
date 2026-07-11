@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2023-2026 QuantumNous
+Copyright (C) 2023-2026 elesos
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -48,7 +48,7 @@ const GENERATED_FILE_MARKERS = [
 ]
 
 const COPYRIGHT_HEADER = `/*
-Copyright (C) 2023-2026 QuantumNous
+Copyright (C) 2023-2026 elesos
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -68,7 +68,7 @@ For commercial licensing, please contact support@quantumnous.com
 `
 
 const PROJECT_COPYRIGHT_BLOCK_PATTERN =
-  /^\/\*\r?\nCopyright \(C\) .+? QuantumNous\r?\n[\s\S]*?For commercial licensing, please contact support@quantumnous\.com\r?\n\*\/\r?\n?/
+  /^\/\*\r?\nCopyright \(C\) .+? elesos\r?\n[\s\S]*?For commercial licensing, please contact support@quantumnous\.com\r?\n\*\/\r?\n?/
 const THIRD_PARTY_COPYRIGHT_PATTERN =
   /^\/\*[\s\S]*?Copyright[\s\S]*?\*\/\r?\n?/i
 

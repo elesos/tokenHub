@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/Calcium-Ion/go-epay/epay"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/setting/operation_setting"
 	"github.com/stretchr/testify/require"
 )
 

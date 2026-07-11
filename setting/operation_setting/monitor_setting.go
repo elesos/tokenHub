@@ -4,7 +4,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/QuantumNous/tokenHub/setting/config"
+	"github.com/elesos/tokenHub/setting/config"
 )
 
 type MonitorSetting struct {

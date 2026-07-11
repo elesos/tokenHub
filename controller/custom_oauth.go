@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/oauth"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/oauth"
 	"github.com/gin-gonic/gin"
 )
 

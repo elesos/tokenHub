@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"io"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/constant"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/constant"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,6 +1,6 @@
 package model
 
-import "github.com/QuantumNous/tokenHub/common"
+import "github.com/elesos/tokenHub/common"
 
 // GetDBTimestamp returns a UNIX timestamp from database time.
 // Falls back to application time on error.

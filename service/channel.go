@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/model"
-	"github.com/QuantumNous/tokenHub/setting/operation_setting"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/model"
+	"github.com/elesos/tokenHub/setting/operation_setting"
+	"github.com/elesos/tokenHub/types"
 )
 
 func formatNotifyType(channelId int, status int) string {

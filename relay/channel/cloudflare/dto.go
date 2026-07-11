@@ -1,6 +1,6 @@
 package cloudflare
 
-import "github.com/QuantumNous/tokenHub/dto"
+import "github.com/elesos/tokenHub/dto"
 
 type CfRequest struct {
 	Messages    []dto.Message `json:"messages,omitempty"`

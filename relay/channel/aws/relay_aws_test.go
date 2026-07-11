@@ -6,8 +6,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/QuantumNous/tokenHub/common"
-	relaycommon "github.com/QuantumNous/tokenHub/relay/common"
+	"github.com/elesos/tokenHub/common"
+	relaycommon "github.com/elesos/tokenHub/relay/common"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"

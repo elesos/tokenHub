@@ -1,6 +1,6 @@
 package cohere
 
-import "github.com/QuantumNous/tokenHub/dto"
+import "github.com/elesos/tokenHub/dto"
 
 type CohereRequest struct {
 	Model       string        `json:"model"`

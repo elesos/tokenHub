@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/QuantumNous/tokenHub/common"
-	"github.com/QuantumNous/tokenHub/dto"
-	"github.com/QuantumNous/tokenHub/logger"
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/common"
+	"github.com/elesos/tokenHub/dto"
+	"github.com/elesos/tokenHub/logger"
+	"github.com/elesos/tokenHub/types"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"

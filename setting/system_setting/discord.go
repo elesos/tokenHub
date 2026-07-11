@@ -1,6 +1,6 @@
 package system_setting
 
-import "github.com/QuantumNous/tokenHub/setting/config"
+import "github.com/elesos/tokenHub/setting/config"
 
 type DiscordSettings struct {
 	Enabled      bool   `json:"enabled"`

@@ -3,7 +3,7 @@ package common
 import (
 	"testing"
 
-	"github.com/QuantumNous/tokenHub/types"
+	"github.com/elesos/tokenHub/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -1,6 +1,6 @@
 package common
 
-import "github.com/QuantumNous/tokenHub/constant"
+import "github.com/elesos/tokenHub/constant"
 
 const defaultAnonymousRequestBodyLimitKB = 512
 

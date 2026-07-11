@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/QuantumNous/tokenHub/setting/config"
+import "github.com/elesos/tokenHub/setting/config"
 
 // CheckinSetting 签到功能配置
 type CheckinSetting struct {

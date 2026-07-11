@@ -1,6 +1,6 @@
 package xunfei
 
-import "github.com/QuantumNous/tokenHub/dto"
+import "github.com/elesos/tokenHub/dto"
 
 type XunfeiMessage struct {
 	Role    string `json:"role"`
